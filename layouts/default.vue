@@ -59,6 +59,7 @@ export default {
 
   mounted() {
     this.CheckHiSKIOJwt();
+    this.GetShoppingCart({ token: null });
   },
 
   data() {
@@ -79,6 +80,7 @@ export default {
   methods: {
     ...mapActions("jwt", ["CheckHiSKIOJwt"]),
     ...mapActions("user", ["GetUserInfo"]),
+    ...mapActions("shoppingcart", ["GetShoppingCart"]),
     closeModal() {
       this.signinModal = false;
     },
@@ -97,6 +99,7 @@ export default {
       handler: function (newValue) {
         if (newValue) {
           this.GetUserInfo(newValue);
+          this.GetShoppingCart({ token: newValue });
         }
       },
     },

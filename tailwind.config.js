@@ -9,6 +9,8 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
+        "1s": "6px",
+        "2s": "10px",
         "50px": "50px",
         17: "68px",
         30: "120px",
@@ -24,6 +26,7 @@ module.exports = {
           main: "#E5E5E5",
           menu: "#FAFAFA",
           font1: "#595959",
+          font2: "#454545",
         },
         primary: "#178FAC",
         secondary: "#288FAC",
@@ -32,6 +35,9 @@ module.exports = {
         },
         decorate1: "#E7F0F5",
         decorate2: "#FFA81D",
+        decorate3: "#F0F0F0",
+        decorate4: "#EB6767",
+        decorate5: "#E34A4A",
       },
       boxShadow: {
         md: "0px 6px 10px rgba(0, 0, 0, 0.05)",
@@ -43,7 +49,11 @@ module.exports = {
       width: {
         "100px": "100px",
       },
+      height: {
+        "2s": "10px",
+      },
       borderRadius: {
+        "7px": "7px",
         "10px": "10px",
         "4xl": "3rem",
       },
@@ -61,10 +71,17 @@ module.exports = {
         120: "120deg",
       },
       fontSize: {
+        xls: "22px",
         "3xls": "2rem",
       },
       scale: {
         135: "1.35",
+      },
+      aspectRatio: {
+        183: "1.83",
+      },
+      backgroundSize: {
+        "100auto": "100% auto",
       },
     },
   },

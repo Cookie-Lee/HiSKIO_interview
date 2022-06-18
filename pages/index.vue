@@ -1,12 +1,21 @@
 <template lang="pug">
-  //- .bg-red-400
-  .pt-50px.bg-gray-main
-    .h-screen
-      span asdasd
+  .pt-50px
+    Products
+    ShoppingCart
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
   name: "IndexPage",
+
+  mounted() {
+    this.GetProducts();
+  },
+
+  methods: {
+    ...mapActions("product", ["GetProducts"]),
+  },
 };
 </script>
