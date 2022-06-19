@@ -1,19 +1,19 @@
 <template lang="pug">
   .flex.justify-center.bg-gray-50
-    .container.py-20
-      .grid.grid-cols-3.gap-x-4
-        .col-span-2
+    .container.pt-5.px-4.pb-6.md_pt-20.md_px-0.md_pb-20
+      .grid.grid-cols-3.gap-x-4.gap-y-12
+        .col-span-3.md_col-span-2
           CardWithTitle(title="購物車")
-            TableHeader
+            TableHeader.md_grid.hidden
             TableItem(v-for="fakeItem in fakeItems" :key="fakeItem.id" :item="fakeItem" :trash="false")
             TableItem(v-for="item in fixShoppingCart" :key="item.id" :item="item")
-        .col-span-1
+        .col-span-3.md_col-span-1
           CardWithTitle(title="小計")
             .pt-3.px-4.pb-5
               .font-sanstc.text-gray-500.mb-3 輸入折扣代碼
               .flex.mb-5
-                input.border.border-gray-400.rounded.py-2.px-2.mr-3.grow
-                button.bg-decorate6.w-20.rounded
+                input.border.border-gray-400.rounded.py-2.px-2.mr-0.md_mr-3.grow
+                button.bg-decorate6.w-20.rounded.hidden.md_inline
                   span.text-decorate7 確定
               .flex.mb-5
                 span.font-sanstc.font-medium.text-gray-600.text-lg.leading-none.underline.underline-offset-1 選擇抵用券
@@ -74,8 +74,8 @@ export default {
           id: item.id,
           image: item.thumbnails.w300,
           title: item.name,
-          price: product.price,
-          fixed_price: product.fixed_price,
+          price: product ? product.price : 0,
+          fixed_price: product ? product.fixed_price : 0,
         };
       });
       return fixShoppingCart;

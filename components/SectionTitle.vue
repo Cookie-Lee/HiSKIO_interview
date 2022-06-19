@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.font-sanstc.text-gray-700.font-medium.text-xls
+  div.font-sanstc.text-gray-700.font-medium.text-xl.md_text-xls
     slot {{ text }}
 </template>
 
