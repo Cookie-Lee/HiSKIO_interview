@@ -17,15 +17,14 @@ export const actions = {
    * @param {*} payload 登入後回傳的所有資料，包含 Bearer、JWToken及過期時間。若沒有傳入表示登出。
    */
   SetToken(context, payload) {
-    // 取得 Bearer及Token
-    let { access_token, token_type } = payload;
-    // token_type首字改大寫
-    token_type = token_type[0].toUpperCase() + token_type.slice(1);
-    // 組合header需要的token字串
-    let token = `${token_type} ${access_token}`;
-
     if (payload) {
       /// 登入的情況
+      // 取得 Bearer及Token
+      let { access_token, token_type } = payload;
+      // token_type首字改大寫
+      token_type = token_type[0].toUpperCase() + token_type.slice(1);
+      // 組合header需要的token字串
+      let token = `${token_type} ${access_token}`;
       // 將token存入localStorage
       localStorage.setItem(context.state.ls_name, token);
     } else {

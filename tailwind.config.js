@@ -35,6 +35,8 @@ module.exports = {
         decorate5: "#E34A4A",
         decorate6: "#FFE5E5",
         decorate7: "#E34A4A",
+        gradient1: "rgba(0,0,0,0.45)",
+        gradient2: "rgba(255,255,255,0.1)",
         gray: {
           50: "#FAFAFA",
           100: "#F5F5F5",
@@ -69,6 +71,7 @@ module.exports = {
         "1s": "6px",
         "2s": "10px",
         "4s": "18px",
+        "50p": "50%",
       },
       maxWidth: {
         md: "450px",

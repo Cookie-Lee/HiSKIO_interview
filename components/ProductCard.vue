@@ -2,7 +2,7 @@
   .w-full.bg-white.shadow-sm.rounded-md.overflow-hidden
     .relative
       img.w-full(:src="image")
-      .absolute.right-2.bottom-2.inline-flex
+      .absolute.bottom-0.w-full.flex.justify-end.items-end.pr-2.pb-2.h-50p.bg-gradient-to-b.from-gradient2.to-gradient1
         img.h-6.mr-3(src="/Icon material-bookmark-border.png")
         button(@click="ToggleProduct(id)")
           img.h-6(src="/Icon awesome-shopping-cart.png")
