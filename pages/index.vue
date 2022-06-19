@@ -11,6 +11,7 @@ export default {
   name: "IndexPage",
 
   mounted() {
+    // 取得商品清單
     this.GetProducts();
   },
 

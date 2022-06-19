@@ -7,7 +7,11 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
   theme: {
+    // 繼承可保留原有的屬性，在繼承時重寫可直接覆蓋
     extend: {
+      // s=增加一半 例如: 1=4px 1s=6px 2=8px 2s=10px
+      // p=%
+      // 數字=數字*4px
       spacing: {
         "1s": "6px",
         "2s": "10px",
@@ -22,17 +26,8 @@ module.exports = {
       },
       colors: {
         transparent: "transparent",
-        gray: {
-          main: "#E5E5E5",
-          menu: "#FAFAFA",
-          font1: "#595959",
-          font2: "#454545",
-        },
         primary: "#178FAC",
         secondary: "#288FAC",
-        blue: {
-          menu: "#EFF5F8",
-        },
         decorate1: "#E7F0F5",
         decorate2: "#FFA81D",
         decorate3: "#F0F0F0",
@@ -40,6 +35,22 @@ module.exports = {
         decorate5: "#E34A4A",
         decorate6: "#FFE5E5",
         decorate7: "#E34A4A",
+        gray: {
+          50: "#FAFAFA",
+          100: "#F5F5F5",
+          300: "#D9D9D9",
+          400: "#BFBFBF",
+          500: "#8C8C8C",
+          600: "#595959",
+          700: "#434343",
+          main: "#E5E5E5",
+          menu: "#FAFAFA",
+          font1: "#595959",
+          font2: "#454545",
+        },
+        blue: {
+          menu: "#EFF5F8",
+        },
       },
       boxShadow: {
         md: "0px 6px 10px rgba(0, 0, 0, 0.05)",
@@ -59,6 +70,12 @@ module.exports = {
         "2s": "10px",
         "4s": "18px",
       },
+      maxWidth: {
+        md: "450px",
+      },
+      maxHeight: {
+        "95p": "95%",
+      },
       borderRadius: {
         "7px": "7px",
         "10px": "10px",
@@ -66,12 +83,6 @@ module.exports = {
       },
       borderWidth: {
         3: "3px",
-      },
-      maxWidth: {
-        md: "450px",
-      },
-      maxHeight: {
-        "95p": "95%",
       },
       rotate: {
         60: "60deg",
@@ -84,24 +95,10 @@ module.exports = {
       scale: {
         135: "1.35",
       },
-      aspectRatio: {
-        183: "1.83",
-      },
-      backgroundSize: {
-        "100auto": "100% auto",
-      },
     },
   },
   separator: "_",
   colors: {
-    gray: {
-      50: "#FAFAFA",
-      100: "#F5F5F5",
-      300: "#D9D9D9",
-      400: "#BFBFBF",
-      500: "#8C8C8C",
-      600: "#595959",
-      700: "#434343",
-    },
+    gray: {},
   },
 };

@@ -37,6 +37,7 @@ export default {
 
   methods: {
     ...mapActions("shoppingcart", ["SetShoppingCart"]),
+    // 購物車移除商品
     ToggleProduct(id) {
       let token = this.token;
       this.SetShoppingCart({ id, token });

@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "hiskio_interview",
+    title: "HiSKIO Interview",
     htmlAttrs: {
       lang: "en",
     },
@@ -13,6 +13,7 @@ export default {
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/fatmeowclub_avatar.png" },
+      // 加入Google字型 Noto Sans TC
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com" },
       {
@@ -51,7 +52,9 @@ export default {
     },
   },
 
+  // 全域變數
   env: {
+    // API路徑
     KISKIO_API: "https://api.hiskio.com/v2",
   },
 };

@@ -37,6 +37,7 @@ export default {
 
   data() {
     return {
+      // 假資料
       fakeItems: [
         {
           id: 1,
@@ -65,10 +66,12 @@ export default {
   computed: {
     ...mapState("product", ["products"]),
     ...mapState("shoppingcart", ["shoppingcart"]),
+    // 組合購物車需要的物件清單
     fixShoppingCart() {
       let shoppingcart = this.shoppingcart ? [...this.shoppingcart] : [];
       let products = this.products ? [...this.products] : [];
       let fixShoppingCart = shoppingcart.map((item) => {
+        // 找到id對應商品資料
         const product = products.find((d) => d.id == item.id);
         return {
           id: item.id,
@@ -80,6 +83,7 @@ export default {
       });
       return fixShoppingCart;
     },
+    // 計算總金額
     fixPrice() {
       const items = [...this.fakeItems, ...this.fixShoppingCart];
       let sum = items

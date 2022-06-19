@@ -67,13 +67,16 @@ export default {
   methods: {
     ...mapMutations("signin", ["ACCOUNT", "PASSWORD"]),
     ...mapActions("signin", ["Signin"]),
+    // 登入表單重置
     Reset() {
       this.ACCOUNT(null);
       this.PASSWORD(null);
     },
+    // 關閉登入表單modal
     Close() {
       this.$emit("close-modal");
     },
+    // 確認登入
     ConfirmSignin() {
       this.Signin()
         .then((res) => {

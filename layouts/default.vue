@@ -58,7 +58,9 @@ export default {
   name: "DefaultLayout",
 
   mounted() {
+    // 確認JWT
     this.CheckHiSKIOJwt();
+    // 取得購物車清單(localStorage)
     this.GetShoppingCart({ token: null });
   },
 
@@ -98,7 +100,10 @@ export default {
     token: {
       handler: function (newValue) {
         if (newValue) {
+          // 有token時
+          // 取得使用者資訊
           this.GetUserInfo(newValue);
+          // 取得購物車清單
           this.GetShoppingCart({ token: newValue });
         }
       },

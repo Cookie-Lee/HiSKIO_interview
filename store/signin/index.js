@@ -1,10 +1,12 @@
+/* 登入 */
+
 import axios from "axios";
 
 export const state = () => ({
-  // account: null,
-  // password: null,
-  account: "hboy8043",
-  password: "s24510586",
+  // 帳號
+  account: null,
+  // 密碼
+  password: null,
 });
 export const mutations = {
   ACCOUNT(state, payload) {
@@ -15,6 +17,11 @@ export const mutations = {
   },
 };
 export const actions = {
+  /**
+   * 登入事件
+   * @param {*} payload
+   * @returns
+   */
   Signin(context, payload) {
     return new Promise((resolve, reject) => {
       let { account, password } = context.state;
@@ -31,12 +38,10 @@ export const actions = {
         data,
       })
         .then((response) => {
+          // 取得token後更新
           context.dispatch("jwt/SetToken", response.data, {
             root: true,
           });
-          // context.dispatch("user/GetUserInfo", response.data, {
-          //   root: true,
-          // });
           resolve(response);
         })
         .catch((error) => {

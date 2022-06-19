@@ -67,6 +67,7 @@ export default {
 
   methods: {
     ...mapActions("shoppingcart", ["SetShoppingCart"]),
+    // 新增或移除商品(課程)
     ToggleProduct(id) {
       let token = this.token;
       this.SetShoppingCart({ id, token });
