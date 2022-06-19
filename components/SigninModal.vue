@@ -16,10 +16,10 @@
             .flex.flex-col.items-center
               img.mb-7.w-30(src="https://frontend.f5ezcode.in/images/logo-hiskio.svg")
               .flex.w-full.mb-9
-                .relative.grow.font-sans.font-medium.text-3xls.text-primary.text-center.before_absolute.before_w-20.before_h-1.before_bg-primary.before_left-50p.before_-bottom-2.before_-translate-x-50p 登入
-                .grow.font-sans.font-medium.text-3xls.text-gray-300.text-center 註冊
+                .relative.grow.font-sanstc.font-medium.text-3xls.text-primary.text-center.before_absolute.before_w-20.before_h-1.before_bg-primary.before_left-50p.before_-bottom-2.before_-translate-x-50p 登入
+                .grow.font-sanstc.font-medium.text-3xls.text-gray-300.text-center 註冊
               OtherSigninButton.mb-3(v-for="otherSigninButton in otherSigninButtons" :key="otherSigninButton.src" :src="otherSigninButton.src" :text="otherSigninButton.text")
-              span.font-sans.text-gray-600.font-medium.mt-3.mb-5 使用 HiSKIO ID 登入
+              span.font-sanstc.text-gray-600.font-medium.mt-3.mb-5 使用 HiSKIO ID 登入
               .flex.bg-gray-50.rounded-md.items-center.w-full.h-10.pl-3.mb-2
                 img.w-5.mr-2(src="/account.png")
                 input.w-full.focus_outline-none.bg-transparent(required placeholder="請輸入 HiSKIO ID" v-model="v_account")
@@ -28,11 +28,11 @@
                 input.w-full.focus_outline-none.bg-transparent(type="password" required placeholder="請輸入登入密碼" v-model="v_password")
               .flex.w-full.items-center.pl-1.mb-6
                 input.scale-135.mr-2.accent-secondary(type="checkbox" id="form_check")
-                label.font-sans.text-gray-500.text-sm(for="form_check") 登入註冊即代表您同意#[span.underline.underline-offset-1 使用者及隱私權政策]
+                label.font-sanstc.text-gray-500.text-sm(for="form_check") 登入註冊即代表您同意#[span.underline.underline-offset-1 使用者及隱私權政策]
               button.w-full.bg-primary.rounded.py-2.mb-5(@click="ConfirmSignin")
                 span.text-white 登入
               button 
-                span.font-sans.text-gray-500.font-normal 忘記密碼
+                span.font-sanstc.text-gray-500.font-normal 忘記密碼
 </template>
 
 <script>

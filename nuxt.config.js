@@ -13,6 +13,12 @@ export default {
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/fatmeowclub_avatar.png" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap",
+      },
     ],
   },
 
@@ -28,7 +34,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
-    "@nuxtjs/tailwindcss",
+    // "@nuxtjs/tailwindcss",
     "@nuxt/postcss8",
   ],
 

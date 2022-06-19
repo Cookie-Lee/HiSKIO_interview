@@ -1,11 +1,11 @@
 module.exports = {
-  // content: [
-  //   "./components/**/*.{js,vue,ts}",
-  //   "./layouts/**/*.vue",
-  //   "./pages/**/*.vue",
-  //   "./plugins/**/*.{js,ts}",
-  //   "./nuxt.config.{js,ts}",
-  // ],
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./nuxt.config.{js,ts}",
+  ],
   theme: {
     extend: {
       spacing: {
@@ -45,12 +45,14 @@ module.exports = {
       },
       fontFamily: {
         pingfang: "PingFang TC",
+        sanstc: "Noto Sans TC",
       },
       width: {
         "100px": "100px",
       },
       height: {
         "2s": "10px",
+        "4s": "18px",
       },
       borderRadius: {
         "7px": "7px",

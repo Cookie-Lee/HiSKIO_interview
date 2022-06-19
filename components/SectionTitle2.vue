@@ -1,11 +1,11 @@
 <template lang="pug">
-  div.font-sanstc.text-gray-700.font-medium.text-xls
+  div.font-sanstc.text-gray-700.font-medium.text-2xl
     slot {{ text }}
 </template>
 
 <script>
 export default {
-  name: "SectionTitle",
+  name: "SectionTitle2",
 
   props: {
     text: {

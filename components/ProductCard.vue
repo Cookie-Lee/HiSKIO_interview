@@ -7,18 +7,18 @@
         button(@click="ToggleProduct(id)")
           img.h-6(src="/Icon awesome-shopping-cart.png")
     .pt-3.px-3.pb-2
-      .font-sans.font-medium.text-gray-font2.text-xl.mb-2 {{ title }}
+      .font-sanstc.font-medium.text-gray-font2.text-xl.mb-2 {{ title }}
       .flex.items-center.mb-1
         Avatar.mr-3(:src="`${avatar}`" width="37.25")
-        span.font-sans.text-gray-500 {{ author }}
+        span.font-sanstc.text-gray-500 {{ author }}
       .flex.justify-between.mb-1s
-        span.font-sans.text-gray-600.text-sm 剩 {{ dayLeft }} 天
-        span.font-sans.text-gray-600.text-sm 已募資{{ alreadyP }}%
+        span.font-sanstc.text-gray-600.text-sm 剩 {{ dayLeft }} 天
+        span.font-sanstc.text-gray-600.text-sm 已募資{{ alreadyP }}%
       .relative.w-full.h-2s.bg-decorate3.rounded-md.mb-2s
         .absolute.h-2s.rounded-7px.bg-gradient-to-r.from-decorate4.to-decorate5(:class="pclasses")
       .flex.items-center
-        span.font-sans.font-medium.text-xls.leading-6.text-gray-700.mr-1 ${{ new Intl.NumberFormat().format(price) }}
-        span.font-sans.text-sm.text-gray-400.line-through ${{ new Intl.NumberFormat().format(fixed_price) }}
+        span.font-sanstc.font-medium.text-xls.leading-none.text-gray-700.mr-1 ${{ new Intl.NumberFormat().format(price) }}
+        span.font-sanstc.text-sm.text-gray-400.line-through ${{ new Intl.NumberFormat().format(fixed_price) }}
 </template>
 
 <script>

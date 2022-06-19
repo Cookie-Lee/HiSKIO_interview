@@ -1,5 +1,5 @@
 <template lang="pug">
-  a.block.px-3.py-4.font-pingfang.leading-4(href="#" :class="classes" @click="click")
+  a.block.px-3.py-4.font-pingfang.leading-none(href="#" :class="classes" @click="click")
     slot {{ text }}
 </template>
 

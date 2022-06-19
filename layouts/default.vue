@@ -14,8 +14,8 @@
                 img.mr-1.w-4(src="/icon-search.png" :class="{ 'md_w-3': isLogin }")
                 span.font-pingfang.text-base.not-italic.font-normal.text-gray-400.hidden.md_inline 搜尋
             .items-center.hidden.md_flex
-              span.font-sans.text-base.not-italic.font-normal.text-gray-font1.mr-4 我想開課
-              span.font-sans.text-base.not-italic.font-normal.text-gray-font1.mr-4(v-if="isLogin") 我的學習
+              span.font-sanstc.text-base.not-italic.font-normal.text-gray-font1.mr-4 我想開課
+              span.font-sanstc.text-base.not-italic.font-normal.text-gray-font1.mr-4(v-if="isLogin") 我的學習
               img.mr-4(src="/icon-shoppingcard.png" :class="{ 'w-5': !isLogin, 'w-4': isLogin }")
               button.rounded.border.border-primary.w-16.h-8.flex.justify-center.items-center.ml-6.mr-3(v-if="!isLogin" @click="signinModal=true")
                 span.text-primary 登入

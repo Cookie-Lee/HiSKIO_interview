@@ -1,7 +1,7 @@
 <template lang="pug">
   .pt-50px
-    Products
     ShoppingCart
+    Products
 </template>
 
 <script>

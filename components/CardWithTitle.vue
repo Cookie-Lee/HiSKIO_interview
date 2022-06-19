@@ -1,14 +1,16 @@
 <template lang="pug">
-  div.font-sanstc.text-gray-700.font-medium.text-xls
-    slot {{ text }}
+  div
+    SectionTitle2.mb-5(:text="title")
+    Card
+      slot
 </template>
 
 <script>
 export default {
-  name: "SectionTitle",
+  name: "CardWithTitle",
 
   props: {
-    text: {
+    title: {
       type: String,
       default: "",
     },
