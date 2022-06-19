@@ -38,6 +38,8 @@ module.exports = {
         decorate3: "#F0F0F0",
         decorate4: "#EB6767",
         decorate5: "#E34A4A",
+        decorate6: "#FFE5E5",
+        decorate7: "#E34A4A",
       },
       boxShadow: {
         md: "0px 6px 10px rgba(0, 0, 0, 0.05)",

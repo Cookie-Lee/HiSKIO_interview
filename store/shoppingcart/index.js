@@ -113,7 +113,9 @@ export const actions = {
           });
       } else {
         let shoppingcart = localStorage.getItem(context.state.ls_name);
-        context.commit("SHOPPINGCART", JSON.parse(shoppingcart));
+        if (shoppingcart) {
+          context.commit("SHOPPINGCART", JSON.parse(shoppingcart));
+        }
       }
     });
   },
