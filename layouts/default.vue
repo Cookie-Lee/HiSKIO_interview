@@ -46,8 +46,8 @@
           MenuListItem(text="登入" :click="()=>{ this.signinModal = true; }")
           MenuListItem(text="註冊" color="text-primary")
         template(v-if="isLogin")
-          MenuListItem(text="登出")
-    SigninModal(v-show="signinModal" @close-modal="closeModal")
+          MenuListItem(text="登出" :click="SignOut")
+    SigninModal(v-show="signinModal" @close-modal="CloseModal")
     Nuxt
 </template>
 
@@ -80,11 +80,15 @@ export default {
   },
 
   methods: {
-    ...mapActions("jwt", ["CheckHiSKIOJwt"]),
-    ...mapActions("user", ["GetUserInfo"]),
+    ...mapActions("jwt", ["CheckHiSKIOJwt", "SetToken"]),
+    ...mapActions("user", ["GetUserInfo", "SetUserInfo"]),
     ...mapActions("shoppingcart", ["GetShoppingCart"]),
-    closeModal() {
+    CloseModal() {
       this.signinModal = false;
+    },
+    SignOut() {
+      this.SetToken(null);
+      window.location.reload();
     },
   },
 

@@ -27,13 +27,15 @@ export const actions = {
       let token = `${token_type} ${access_token}`;
       // 將token存入localStorage
       localStorage.setItem(context.state.ls_name, token);
+      // 將store的token更新
+      context.commit("TOKEN", token);
     } else {
       /// 登出的情況
       // 從localStorage刪除token
       localStorage.removeItem(context.state.ls_name);
+      // 將store的token更新
+      context.commit("TOKEN", null);
     }
-    // 將store的token更新
-    context.commit("TOKEN", token);
   },
   /**
    * 重新整理後確認登入token

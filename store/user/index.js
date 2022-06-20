@@ -37,4 +37,7 @@ export const actions = {
         });
     });
   },
+  SetUserInfo(context, payload) {
+    context.commit("USERINFO", payload);
+  },
 };
