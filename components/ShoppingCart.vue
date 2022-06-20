@@ -5,8 +5,13 @@
         .col-span-3.md_col-span-2
           CardWithTitle(title="購物車")
             TableHeader.md_grid.hidden
-            TableItem(v-for="fakeItem in fakeItems" :key="fakeItem.id" :item="fakeItem" :trash="false")
-            TableItem(v-for="item in fixShoppingCart" :key="item.id" :item="item")
+            transition-group(enter-active-class="duration-500 ease-in-out opacity-0 -translate-x-10" 
+                             enter-to-class="opacity-100 translate-x-0"
+                             leave-active-class="duration-200 ease-in"
+                             leave-class="opacity-100 translate-x-0"
+                             leave-to-class="opacity-0 -translate-x-16")
+              TableItem(v-for="fakeItem in fakeItems" :key="fakeItem.id" :item="fakeItem" :trash="false")
+              TableItem(v-for="item in fixShoppingCart" :key="item.id" :item="item")
         .col-span-3.md_col-span-1
           CardWithTitle(title="小計")
             .pt-3.px-4.pb-5
