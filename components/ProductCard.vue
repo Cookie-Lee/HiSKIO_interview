@@ -1,8 +1,8 @@
 <template lang="pug">
-  .w-full.bg-white.shadow-sm.rounded-md.overflow-hidden
-    .relative
+  .w-full.bg-white.shadow-sm.rounded-md.overflow-hidden.transition.duration-300.ease-in-out.hover_shadow-lg.hover_-translate-y-1.group
+    .relative.overflow-hidden
       img.w-full(:src="image")
-      .absolute.bottom-0.w-full.flex.justify-end.items-end.pr-2.pb-2.h-50p.bg-gradient-to-b.from-gradient2.to-gradient1
+      .absolute.bottom-0.w-full.flex.justify-end.items-end.pr-2.pb-2.h-50p.bg-gradient-to-b.from-gradient2.to-gradient1.transition.duration-300.translate-y-5.group-hover_translate-y-0.opacity-0.group-hover_opacity-100
         img.h-6.mr-3(src="/Icon material-bookmark-border.png")
         button(@click="ToggleProduct(id)")
           img.h-6(src="/Icon awesome-shopping-cart.png")

@@ -47,7 +47,7 @@
           MenuListItem(text="註冊" color="text-primary")
         template(v-if="isLogin")
           MenuListItem(text="登出" :click="SignOut")
-    SigninModal(v-show="signinModal" @close-modal="CloseModal")
+    SigninModal(v-show="signinModal" :signinModal="signinModal" @close-modal="CloseModal")
     Nuxt
 </template>
 
@@ -68,6 +68,7 @@ export default {
     return {
       mobileMenu: false,
       signinModal: false,
+      show: false,
       menuListItems: [
         "我的抵用券",
         "任務板",
